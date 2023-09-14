@@ -1,0 +1,44 @@
+.TodoModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: $color-backgorund-overlay;
+  z-index: 200;
+  @include flexCenter(0);
+}
+
+.modifyTodo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 80px;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 8px;
+  @include flexCenter(5px);
+  z-index: 201;
+
+  input[type="text"] {
+    height: 35px;
+    width: 85%;
+    border: none;
+    outline-style: none;
+    border-radius: 8px;
+    padding: $padding-form-input;
+    background-color: $color-background-send;
+    color: $color-white;
+  }
+  .modifyButton {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    &:hover,
+    &:active {
+      color: $color-background-send-hover;
+    }
+  }
+}

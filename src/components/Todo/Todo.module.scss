@@ -1,0 +1,38 @@
+.Todo {
+  width: 100%;
+  height: calc(100vh - 118px);
+  @include flexColumn(10px);
+  align-items: center;
+  padding: 15px;
+  overflow-y: auto;
+  
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    border-radius: 15px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+    border-radius: 15px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color-secondary-hover;
+  }
+
+  .todoTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: $color-todo-category;
+    margin-bottom: 15px;
+  }
+}

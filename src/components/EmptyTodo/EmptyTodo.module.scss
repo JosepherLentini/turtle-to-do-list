@@ -1,0 +1,56 @@
+.EmptyTodo {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  @include flexCenter(0);
+  padding: 50px 25px;
+
+  .empty_message {
+    @include flexColumn(0);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    .message {
+      @include flexColumn(5px);
+      h1 {
+        @include flexCenter(0);
+        color: $color-primary;
+        
+      }
+       .relax{
+        color: $color-todo-category;
+       }
+      p {
+        @include flexCenter(0);
+        text-transform: uppercase;
+        color: $color-empty-text;
+        font-size: 18px;
+      
+      }
+      span{
+        @include flexCenter(0);
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+    .turtle {
+      @include flexCenter(0);
+      
+      &_image{
+        animation: updown 2s infinite alternate;
+      }
+    }
+  }
+
+  @keyframes updown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+     transform: translateY(20px);
+    }
+  }
+}

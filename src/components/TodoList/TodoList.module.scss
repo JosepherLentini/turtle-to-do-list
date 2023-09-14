@@ -1,0 +1,65 @@
+.todoItem {
+  width: 100%;
+  @include flexJusifyBetween(0);
+  align-items: center;
+  padding: 10px;
+  background-color: $color-todo;
+  color: $color-todo-text;
+  border-radius: 8px;
+  box-shadow: $color-shadow-todo;
+
+  .todoText {
+    @include flexColumn(4px);
+    width: 280px;
+    overflow-wrap: break-word;
+
+    .todo {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .todoCategory {
+      font-size: 14px;
+      font-weight: 300;
+      font-style: italic;
+      color: $color-todo-category;
+    }
+  }
+
+  .deleteComplete {
+    border-radius: 50%;
+    padding: 5px;
+    @include flexCenter(15px);
+
+    .complete {
+      width: 20px;
+      height: 20px;
+      color: $color-todo-category;
+      font-size: 18px;
+      cursor: pointer;
+      @include flexCenter(0);
+    }
+
+    .completeTrue {
+      color: $color-complete;
+    }
+
+    .delBin {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      @include flexCenter(0);
+      &:active {
+        color: #e7bebb;
+      }
+    }
+
+    .edit {
+      width: 20px;
+      height: 20px;
+      color: $color-todo-category;
+      cursor: pointer;
+      @include flexCenter(0);
+    }
+  }
+}

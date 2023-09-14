@@ -1,0 +1,40 @@
+.CategorySelect {
+  position: relative;
+  background-color: $color-background-send;
+  width: max-content;
+  border-radius: 8px;
+  cursor: pointer;
+  color: $color-white;
+  &:hover, &:active{
+    background-color: $color-background-send-hover;
+  }
+
+  .categoryPlaceholder {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .categoryList {
+    width: max-content;
+    max-height: 200px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    overflow-y: hidden;
+    border-radius: 8px;
+    background-color: $color-background-send;
+
+    & li {
+      list-style: none;
+      padding: $padding-form;
+      font-size: 14px;
+      &:hover,
+      &:active {
+        background-color: $color-primary;
+      }
+
+      &:active {
+        background-color: $color-background-send-hover;
+      }
+    }
+  }
+}

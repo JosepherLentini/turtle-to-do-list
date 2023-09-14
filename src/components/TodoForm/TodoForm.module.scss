@@ -1,0 +1,131 @@
+.TodoForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .emptyMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $color-background;
+    color: $color-red;
+    border-radius: 8px;
+    z-index: 20;
+  }
+
+  .Form {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: $padding-form;
+    border-radius: 8px 8px 0px 0px;
+    background-color: $color-primary;
+    z-index: 20;
+    @include flexColumn(10px);
+
+    .writeTodo {
+      @include flexAlignCenter(10px);
+      .todoTextInput {
+        width: 90%;
+        height: 35px;
+        border: none;
+        outline-style: none;
+        border-radius: 8px;
+        padding: $padding-form-input;
+        background-color: $color-background-send;
+        color: $color-white;
+
+        &::placeholder {
+          color: $color-white;
+        }
+      }
+      .send {
+        padding: 7px;
+        height: 35px;
+        width: 35px;
+        background-color: $color-background-send;
+        border-radius: 50%;
+        @include flexCenter(0);
+        &:hover,
+        &:active {
+          background-color: $color-background-send-hover;
+        }
+
+        &_icon {
+          @include flexCenter(0);
+          width: 30px;
+          height: 30px;
+        
+        }
+      }
+    }
+
+    .select {
+      @include flexAlignCenter(20px);
+    }
+  }
+
+  .upForm {
+    bottom: 0;
+  }
+  .formOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: $color-backgorund-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .noOverlay {
+    top: -100%;
+  }
+}
+
+.openFormButton {
+  @include flexCenter(0);
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+
+  .openForm {
+    @include flexCenter(10px);
+    padding: $padding-openform-button;
+    border-radius: 8px;
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: $color-shadow-addButton;
+
+    &:hover,
+    &:active {
+      background-color: $color-primary-hover;
+    }
+
+    &_icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &_down {
+    bottom: -20%;
+  }
+
+  @keyframes buttonscale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+}
