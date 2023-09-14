@@ -1,6 +1,6 @@
 .Todo {
   width: 100%;
-  height: calc(100vh - 118px);
+  height: calc(100% - 118px);
   @include flexColumn(10px);
   align-items: center;
   padding: 15px;
